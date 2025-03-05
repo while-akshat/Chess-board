@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css" />
+    
+  </head>
+  
+  <body>
+    
+
+    <script>
+      document.write(`<table>`);
+      for (let i = 1; i <= 8; i++) {
+        document.write(`<tr>`);
+        for (let j = 1; j <= 8; j++) {
+          let color = (i + j) % 2 == 0 ? "white" : "black";
+          // pawn
+          // black pawn
+          if (i === 2) {
+            document.write(
+              `<td class = "${color}"><img src="./assets/white/wp.png" alt=""></td>`
+            );
+            // white pawn
+          }else if (i === 7) {
+            document.write(
+              `<td class = "${color}" style="color:black;"><img src="./assets/black/bp.png" alt=""></td>`
+            );
+          }  
+          // white pieces
+          else if (i === 1) {
+            // rook
+            if (j === 1 || j === 8) {
+              document.write(
+                `<td class = "${color}" style="color:white;"><img src="./assets/white/rook.png" alt=""></td>`
+              );
+              // knight
+            } else if (j === 2 || j === 7) {
+              document.write(
+                `<td class = "${color}" style="color:white;"><img src="./assets/white/knight.png" alt=""></td>`
+              );
+              // bishop
+            } else if (j === 3 || j === 6) {
+              document.write(
+                `<td class = "${color}" style="color:rwhite"><img src="./assets/white/bishop.png" alt=""></td>`
+              );
+              // queen
+            } else if (j === 4) {
+              document.write(
+                `<td class = "${color}" style="color:white;"><img src="./assets/white/queen.png" alt=""></td>`
+              );
+              // king
+            } else {
+              document.write(`<td class = "${color}" ><img src="./assets/white/king.png" alt=""></td>`);
+            }
+            // black pieces
+          }else if (i === 8) {
+            // rook
+            if (j === 1 || j === 8) {
+              document.write(
+                `<td class = "${color}" style="color:black;"><img src="./assets/black/rook.png" alt=""></td>`
+              );
+              // knight
+            } else if (j === 2 || j === 7) {
+              document.write(
+                `<td class = "${color}" style="color:black;"><img src="./assets/black/knight.png" alt=""></td>`
+              );
+              // bishop
+            } else if (j === 3 || j === 6) {
+              document.write(
+                `<td class = "${color}" style="color:black;"><img src="./assets/black/bishop.png" alt=""></td>`
+              );
+              // queen
+            } else if (j === 4) {
+              document.write(
+                `<td class = "${color}" style="color:black;"><img src="./assets/black/queen.png" alt=""></td>`
+              );
+              // king
+            } else {
+              document.write(`<td class = "${color}" ><img src="./assets/black/king.png" alt=""></td>`);
+            }
+          }
+           else {
+            document.write(`<td class = "${color}"></td>`);
+          }
+        }
+        document.write(`</tr>`);
+      }
+      document.write(`</table>`);
+    </script>
+  </body>
+</html>
+<!-- if((i%2  == 0) &&   ){ -->
+<!--  -->
